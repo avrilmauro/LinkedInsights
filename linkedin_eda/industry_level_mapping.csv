@@ -1,0 +1,255 @@
+,Industry,Sector
+0,Banking,Financial Services
+1,Investment Banking,Financial Services
+2,Internet Publishing,Media & Entertainment
+3,Media Production,Media & Entertainment
+4,Electric Lighting Equipment Manufacturing,Manufacturing & Industrial
+5,Hospitals and Health Care,Healthcare & Life Sciences
+6,Education Administration Programs,Education & Non-Profit
+7,Software Development,Technology & IT Services
+8,Insurance,Financial Services
+9,Textile Manufacturing,Manufacturing & Industrial
+10,Architectural and Structural Metal Manufacturing,Manufacturing & Industrial
+11,Computer Networking Products,Technology & IT Services
+12,Retail Office Supplies and Gifts,Consumer Goods & Retail
+13,Personal and Laundry Services,Other Services
+14,Information Technology & Services,Technology & IT Services
+15,"Movies, Videos, and Sound",Media & Entertainment
+16,Computers and Electronics Manufacturing,Technology & IT Services
+17,Electric Power Generation,Energy & Utilities
+18,Leasing Non-residential Real Estate,Construction & Real Estate
+19,Wholesale Building Materials,Construction & Real Estate
+20,Construction,Construction & Real Estate
+21,Computer and Network Security,Technology & IT Services
+22,IT System Operations and Maintenance,Technology & IT Services
+23,Human Resources,Professional & Business Services
+24,Newspaper Publishing,Media & Entertainment
+25,Public Relations and Communications Services,Professional & Business Services
+26,Repair and Maintenance,Other Services
+27,Real Estate,Construction & Real Estate
+28,Telecommunications,Technology & IT Services
+29,Accounting,Professional & Business Services
+30,Tobacco Manufacturing,Manufacturing & Industrial
+31,Environmental Quality Programs,Agriculture & Environment
+32,Communications Equipment Manufacturing,Technology & IT Services
+33,Automation Machinery Manufacturing,Manufacturing & Industrial
+34,Education Management,Education & Non-Profit
+35,Renewable Energy Power Generation,Energy & Utilities
+36,Meat Products Manufacturing,Manufacturing & Industrial
+37,Book and Periodical Publishing,Media & Entertainment
+38,Community Development and Urban Planning,Education & Non-Profit
+39,Beverage Manufacturing,Consumer Goods & Retail
+40,Retail Groceries,Consumer Goods & Retail
+41,"Oil, Gas, and Mining",Energy & Utilities
+42,Nursing Homes and Residential Care Facilities,Healthcare & Life Sciences
+43,Trusts and Estates,Financial Services
+44,Capital Markets,Financial Services
+45,Research Services,Professional & Business Services
+46,Robotics Engineering,Manufacturing & Industrial
+47,Health and Human Services,Healthcare & Life Sciences
+48,Restaurants,Hospitality & Food Services
+49,Baked Goods Manufacturing,Consumer Goods & Retail
+50,Biotechnology,Healthcare & Life Sciences
+51,Equipment Rental Services,Professional & Business Services
+52,Motor Vehicle Parts Manufacturing,Manufacturing & Industrial
+53,Spectator Sports,Media & Entertainment
+54,Insurance Agencies and Brokerages,Financial Services
+55,Landscaping Services,Other Services
+56,Wholesale Chemical and Allied Products,Manufacturing & Industrial
+57,Sporting Goods Manufacturing,Manufacturing & Industrial
+58,Primary and Secondary Education,Education & Non-Profit
+59,Musicians,Other Services
+60,Armed Forces,Government & Public Services
+61,Golf Courses and Country Clubs,Hospitality & Food Services
+62,Oil and Gas,Energy & Utilities
+63,Economic Programs,Government & Public Services
+64,Public Safety,Government & Public Services
+65,"Appliances, Electrical, and Electronics Manufacturin",Manufacturing & Industrial
+66,"Wholesale Appliances, Electrical, and Electronics",Manufacturing & Industrial
+67,Computer Hardware Manufacturing,Technology & IT Services
+68,Urban Transit Services,Transportation & Logistics
+69,Retail Motor Vehicles,Consumer Goods & Retail
+70,Ground Passenger Transportation,Transportation & Logistics
+71,Venture Capital and Private Equity Principals,Financial Services
+72,Medical Device,Healthcare & Life Sciences
+73,Gambling Facilities and Casinos,Hospitality & Food Services
+74,Biotechnology Research,Healthcare & Life Sciences
+75,Retail Apparel and Fashion,Consumer Goods & Retail
+76,HVAC and Refrigeration Equipment Manufacturing,Manufacturing & Industrial
+77,Education,Education & Non-Profit
+78,Agricultural Chemical Manufacturing,Agriculture & Environment
+79,Industrial Machinery Manufacturing,Manufacturing & Industrial
+80,Professional Services,Professional & Business Services
+81,Wholesale Food and Beverage,Consumer Goods & Retail
+82,Professional Training and Coaching,Professional & Business Services
+83,International Trade and Development,Professional & Business Services
+84,Food and Beverage Services,Hospitality & Food Services
+85,Market Research,Professional & Business Services
+86,Retail,Consumer Goods & Retail
+87,Medical Equipment Manufacturing,Healthcare & Life Sciences
+88,Engineering Services,Professional & Business Services
+89,Non-profit Organization Management,Education & Non-Profit
+90,"Technology, Information and Internet",Technology & IT Services
+91,Information Services,Technology & IT Services
+92,IT System Installation and Disposal,Technology & IT Services
+93,Paper and Forest Product Manufacturing,Manufacturing & Industrial
+94,Personal Care Product Manufacturing,Consumer Goods & Retail
+95,Utilities,Energy & Utilities
+96,"Retail Appliances, Electrical, and Electronic Equipment",Consumer Goods & Retail
+97,"Transportation, Logistics, Supply Chain and Storage",Transportation & Logistics
+98,Public Policy Offices,Government & Public Services
+99,Internet News,Media & Entertainment
+100,Climate Technology Product Manufacturing,Agriculture & Environment
+101,Truck Transportation,Transportation & Logistics
+102,Retail Office Equipment,Consumer Goods & Retail
+103,Wholesale Luxury Goods and Jewelry,Consumer Goods & Retail
+104,Housing Programs,Education & Non-Profit
+105,Animation and Post-production,Media & Entertainment
+106,Food and Beverage Manufacturing,Consumer Goods & Retail
+107,Automotive,Manufacturing & Industrial
+108,Warehousing and Storage,Transportation & Logistics
+109,Staffing and Recruiting,Professional & Business Services
+110,Online and Mail Order Retail,Consumer Goods & Retail
+111,"Glass, Ceramics and Concrete Manufacturing",Manufacturing & Industrial
+112,Entertainment,Media & Entertainment
+113,Plastics Manufacturing,Manufacturing & Industrial
+114,Museums,Media & Entertainment
+115,Events Services,Hospitality & Food Services
+116,Pipeline Transportation,Transportation & Logistics
+117,"Wholesale Hardware, Plumbing, Heating Equipment",Manufacturing & Industrial
+118,Specialty Trade Contractors,Construction & Real Estate
+119,Primary Metal Manufacturing,Manufacturing & Industrial
+120,Hospitality,Hospitality & Food Services
+121,Motor Vehicle Manufacturing,Manufacturing & Industrial
+122,Surveying and Mapping Services,Professional & Business Services
+123,Outsourcing and Offshoring Consulting,Professional & Business Services
+124,Veterinary Services,Other Services
+125,Fire Protection,Government & Public Services
+126,Consumer Services,Consumer Goods & Retail
+127,Entertainment Providers,Media & Entertainment
+128,"Museums, Historical Sites, and Zoos",Media & Entertainment
+129,Public Health,Government & Public Services
+130,Medical Practices,Healthcare & Life Sciences
+131,Computer Games,Technology & IT Services
+132,Social Networking Platforms,Technology & IT Services
+133,Furniture and Home Furnishings Manufacturing,Manufacturing & Industrial
+134,Insurance Carriers,Financial Services
+135,Retail Art Supplies,Consumer Goods & Retail
+136,Food Production,Consumer Goods & Retail
+137,Commercial and Service Industry Machinery Manufacturing,Manufacturing & Industrial
+138,Data Security Software Products,Technology & IT Services
+139,Residential Building Construction,Construction & Real Estate
+140,Broadcast Media Production and Distribution,Media & Entertainment
+141,Retail Health and Personal Care Products,Consumer Goods & Retail
+142,Think Tanks,Professional & Business Services
+143,Accessible Architecture and Design,Construction & Real Estate
+144,Telephone Call Centers,Professional & Business Services
+145,Packaging and Containers Manufacturing,Manufacturing & Industrial
+146,Law Practice,Professional & Business Services
+147,Retail Books and Printed News,Consumer Goods & Retail
+148,IT Services and IT Consulting,Technology & IT Services
+149,Railroad Equipment Manufacturing,Manufacturing & Industrial
+150,Non-profit Organizations,Education & Non-Profit
+151,Space Research and Technology,Technology & IT Services
+152,Political Organizations,Government & Public Services
+153,Natural Gas Distribution,Energy & Utilities
+154,Food & Beverages,Consumer Goods & Retail
+155,Research,Professional & Business Services
+156,Legislative Offices,Government & Public Services
+157,Business Consulting and Services,Professional & Business Services
+158,"Electric Power Transmission, Control, and Distribution",Energy & Utilities
+159,Renewables & Environment,Energy & Utilities
+160,Furniture,Consumer Goods & Retail
+161,Semiconductor Manufacturing,Technology & IT Services
+162,E-Learning Providers,Technology & IT Services
+163,Maritime Transportation,Transportation & Logistics
+164,Retail Luxury Goods and Jewelry,Consumer Goods & Retail
+165,Airlines and Aviation,Transportation & Logistics
+166,Shipbuilding,Manufacturing & Industrial
+167,Executive Offices,Professional & Business Services
+168,Civic and Social Organizations,Education & Non-Profit
+169,Law Enforcement,Government & Public Services
+170,Individual and Family Services,Other Services
+171,Freight and Package Transportation,Transportation & Logistics
+172,Mental Health Care,Healthcare & Life Sciences
+173,Internet Marketplace Platforms,Technology & IT Services
+174,Higher Education,Education & Non-Profit
+175,Libraries,Education & Non-Profit
+176,Military and International Affairs,Government & Public Services
+177,"Health, Wellness & Fitness",Healthcare & Life Sciences
+178,Aviation and Aerospace Component Manufacturing,Manufacturing & Industrial
+179,Consumer Goods,Consumer Goods & Retail
+180,Writing and Editing,Media & Entertainment
+181,Construction Hardware Manufacturing,Manufacturing & Industrial
+182,Marketing Services,Professional & Business Services
+183,Aviation & Aerospace,Transportation & Logistics
+184,Nanotechnology Research,Technology & IT Services
+185,"Boilers, Tanks, and Shipping Container Manufacturing",Manufacturing & Industrial
+186,Human Resources Services,Professional & Business Services
+187,Apparel Manufacturing,Manufacturing & Industrial
+188,Utilities Administration,Energy & Utilities
+189,Building Materials,Construction & Real Estate
+190,Defense and Space Manufacturing,Manufacturing & Industrial
+191,Financial Services,Financial Services
+192,Chemical Manufacturing,Manufacturing & Industrial
+193,"Technology, Information and Media",Technology & IT Services
+194,Services for Renewable Energy,Energy & Utilities
+195,Rail Transportation,Transportation & Logistics
+196,Apparel & Fashion,Consumer Goods & Retail
+197,Wholesale Import and Export,Professional & Business Services
+198,Food and Beverage Retail,Consumer Goods & Retail
+199,Mining,Energy & Utilities
+200,Printing Services,Media & Entertainment
+201,Office Furniture and Fixtures Manufacturing,Manufacturing & Industrial
+202,Pharmaceutical Manufacturing,Healthcare & Life Sciences
+203,Advertising Services,Professional & Business Services
+204,Civil Engineering,Professional & Business Services
+205,Security and Investigations,Government & Public Services
+206,Administration of Justice,Government & Public Services
+207,Renewable Energy Semiconductor Manufacturing,Energy & Utilities
+208,Wellness and Fitness Services,Healthcare & Life Sciences
+209,Semiconductors,Technology & IT Services
+210,Travel Arrangements,Hospitality & Food Services
+211,Luxury Goods & Jewelry,Consumer Goods & Retail
+212,Machinery Manufacturing,Manufacturing & Industrial
+213,Farming,Agriculture & Environment
+214,Facilities Services,Professional & Business Services
+215,Housing and Community Development,Education & Non-Profit
+216,Engines and Power Transmission Equipment Manufacturing,Manufacturing & Industrial
+217,Online Audio and Video Media,Media & Entertainment
+218,Mechanical Or Industrial Engineering,Professional & Business Services
+219,Legal Services,Professional & Business Services
+220,Wind Electric Power Generation,Energy & Utilities
+221,Fundraising,Education & Non-Profit
+222,Renewable Energy Equipment Manufacturing,Energy & Utilities
+223,"Paint, Coating, and Adhesive Manufacturing",Manufacturing & Industrial
+224,Rubber Products Manufacturing,Manufacturing & Industrial
+225,Hotels and Motels,Hospitality & Food Services
+226,Interior Design,Construction & Real Estate
+227,Investment Management,Financial Services
+228,Manufacturing,Manufacturing & Industrial
+229,"Agriculture, Construction, Mining Machinery Manufacturing",Manufacturing & Industrial
+230,Mattress and Blinds Manufacturing,Manufacturing & Industrial
+231,"Air, Water, and Waste Program Management",Agriculture & Environment
+232,Government Relations Services,Government & Public Services
+233,Business Content,Professional & Business Services
+234,Government Administration,Government & Public Services
+235,Building Construction,Construction & Real Estate
+236,Wholesale,Professional & Business Services
+237,Environmental Services,Agriculture & Environment
+238,IT System Custom Software Development,Technology & IT Services
+239,Household Services,Other Services
+240,Data Infrastructure and Analytics,Technology & IT Services
+241,Real Estate and Equipment Rental Services,Construction & Real Estate
+242,Electrical Equipment Manufacturing,Manufacturing & Industrial
+243,Chemical Raw Materials Manufacturing,Manufacturing & Industrial
+244,Fabricated Metal Products,Manufacturing & Industrial
+245,IT System Testing and Evaluation,Technology & IT Services
+246,Design Services,Professional & Business Services
+247,Administrative and Support Services,Professional & Business Services
+248,Artists and Writers,Other Services
+249,Office Administration,Professional & Business Services
+250,Recreational Facilities,Other Services
+251,Architecture and Planning,Construction & Real Estate
+252,Commercial Real Estate,Construction & Real Estate
+253,Occupational and Speech Therapists,Healthcare & Life Sciences
