@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".btn").addEventListener("click", function(event) {
+                event.preventDefault();
+                document.querySelector("#discover").scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="landing">
+        <div class="overlay">
+            <h1>LinkedInsights</h1>
+            <p1>Explore the job landscape.</p1>
+            <div class="btn-container">
+                <a href="#discover" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="discover" class="section">
+        <div class="image-container"></div>
+        <div class="text-container">
+            <h2>Introduction</h2>
+            <p2>The job market today is constantly changing, and understanding hiring trends can help both the job seekers and employers make better decisions.
+                The project that we are doing analyzes a dataset of LinkedIn job postings from 2023 to 2024 to explore trends in job availability, industry demand,
+                required skills, and hiring locations. As we observe shifts in the economy, new technologies, and the rise of remote work since the pandemic,
+                it’s more important than ever to see how opportunities are evolving. By creating effective and informative visualizations of these trends,
+                we hope to give students like us, professionals, and businesses useful insights and views into what the job market looks like today
+                and where it might be headed. NOTE: THIS IS NOT THE FINAL TEXT. THIS IS JUST A PLACEHOLDER FROM THE PROPOSAL.
+            </p2>
+        </div>
+    </div>
+</body>
+</html>
