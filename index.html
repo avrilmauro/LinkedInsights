@@ -16,6 +16,24 @@
                 event.preventDefault();
                 document.querySelector("#info-section").scrollIntoView({ behavior: "smooth", block: "start" });
             });
+            document.querySelector(".btn-scroll-interactive").addEventListener("click", function(event) {
+                event.preventDefault();
+                document.querySelector("#interactive-section").scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+
+            document.querySelectorAll(".accordion-btn").forEach((btn, index) => {
+                btn.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const links = [
+                        "page1.html",
+                        "page2.html",
+                        "page3.html",
+                        "page4.html",
+                        "page5.html"
+                    ];
+                    window.location.href = links[index];
+                });
+            });
         });
     </script>
 </head>
@@ -114,7 +132,69 @@
                     There are 19 total attributes in the clean dataset. </p3>
             </div>
         </div>
+        <div class="btn-container">
+            <a href="#interactive-section" class="btn btn-scroll-interactive">See Visualizations</a>
+        </div>
     </div>
+
+    <div id="interactive-section" class="interactive-section">
+        <div class="interactive-header">Explore the Visualizations</div>
+        <div class="interactive-content-wrapper">
+            <div class="button-container">
+                <div class="accordion-item">
+                    <button class="accordion-btn">Map: Salary vs. Location</button>
+                    <div class="accordion-content">
+                        <p>Explore how salaries vary geographically based on job location and regional demand.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn">Box Plot: Salary vs. Tenure</button>
+                    <div class="accordion-content">
+                        <p>Understand how years of experience or seniority impact salary distributions across industries.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn">Bar Plot: Salary vs. Skills</button>
+                    <div class="accordion-content">
+                        <p>Analyze which technical or soft skills are associated with higher or lower salary ranges.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn">Scatter Plot: Salary vs. Impressions</button>
+                    <div class="accordion-content">
+                        <p>Visualize the relationship between job visibility and salary—do popular jobs pay more?</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn">Graph Network: Skill Co-occurrence</button>
+                    <div class="accordion-content">
+                        <p>Discover how skills connect with one another across job postings in a network structure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="visual-image-container">
+                <img src="https://i.ibb.co/vCLfckpJ/Screenshot-2025-04-03-at-9-30-39-PM.png" alt="Visual Overview">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll(".interactive-btn").forEach(button => {
+            button.addEventListener("mouseover", function() {
+                document.getElementById("button-description").textContent = this.getAttribute("data-description");
+            });
+            button.addEventListener("mouseout", function() {
+                document.getElementById("button-description").textContent = "Hover over a button to see details.";
+            });
+        });
+    </script>
+
+
 
 </body>
 </html>
