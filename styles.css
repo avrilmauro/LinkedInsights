@@ -309,7 +309,7 @@ body {
 .summary_section {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     background: url('https://i.ibb.co/6RgMkJqF/summary-splash.png') no-repeat center center/cover;
     padding: 50px;
 }
