@@ -1,200 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector(".btn").addEventListener("click", function(event) {
-                event.preventDefault();
-                document.querySelector("#discover").scrollIntoView({ behavior: "smooth", block: "start" });
-            });
-            document.querySelector(".btn-discover").addEventListener("click", function(event) {
-                event.preventDefault();
-                document.querySelector("#info-section").scrollIntoView({ behavior: "smooth", block: "start" });
-            });
-            document.querySelector(".btn-scroll-interactive").addEventListener("click", function(event) {
-                event.preventDefault();
-                document.querySelector("#interactive-section").scrollIntoView({ behavior: "smooth", block: "start" });
-            });
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector(".btn").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.querySelector("#discover").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
 
-            document.querySelectorAll(".accordion-btn").forEach((btn, index) => {
-                btn.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    const links = [
-                        "page1.html",
-                        "page2.html",
-                        "page3.html",
-                        "page4.html",
-                        "page5.html"
-                    ];
-                    window.location.href = links[index];
-                });
-            });
+      document.querySelector(".btn-discover").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.querySelector("#info-section").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      document.querySelector(".btn-scroll-interactive").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.querySelector("#interactive-section").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      document.querySelectorAll(".accordion-btn").forEach((btn, index) => {
+        btn.addEventListener("click", function (event) {
+          event.preventDefault();
+          const links = [
+            "page1.html",
+            "page2.html",
+            "page3.html",
+            "page4.html",
+            "page5.html"
+          ];
+          window.location.href = links[index];
         });
-    </script>
+      });
+
+      const imageMap = {
+        "btn1": "https://cdn-icons-png.flaticon.com/512/9029/9029931.png",
+        "btn2": "https://cdn-icons-png.freepik.com/512/9591/9591160.png",
+        "btn3": "https://cdn-icons-png.freepik.com/512/1638/1638183.png",
+        "btn4": "https://cdn-icons-png.freepik.com/256/4104/4104180.png",
+        "btn5": "https://cdn-icons-png.freepik.com/512/8041/8041752.png"
+      };
+
+      const displayImg = document.getElementById("display-image");
+      const buttons = document.querySelectorAll(".accordion-btn");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("mouseover", () => {
+          const newSrc = imageMap[btn.id];
+          if (newSrc) displayImg.src = newSrc;
+        });
+      });
+
+    });
+  </script>
 </head>
+
 <body>
-    <header class="fixed-header">
-        <div class="header-title">LinkedInsights</div>
-        <nav>
-            <ul>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">HOME</a>
-                    <div class="dropdown-content">
-                        <a href="#discover">Discover</a>
-                        <a href="#info-section">Info</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">DATA VISUALIZATIONS</a>
-                    <div class="dropdown-content">
-                        <a href="#">Map: Salary vs. Location</a>
-                        <a href="#">Box Plot: Salary vs. Tenure</a>
-                        <a href="#">Bar Plot: Salary vs. Skills</a>
-                        <a href="#">Scatter Plot: Salary vs. Impressions</a>
-                        <a href="#">Graph Network: ?</a>
-                    </div>
-                </li>
-                <li><a href="#">SUMMARY</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="fixed-header">
+    <div class="header-title">LinkedInsights</div>
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="index.html" class="dropbtn">HOME</a>
+          <div class="dropdown-content">
+            <a href="#discover">Discover</a>
+            <a href="#info-section">Info</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#interactive-section" class="dropbtn">DATA VISUALIZATIONS</a>
+          <div class="dropdown-content">
+            <a href="#">Map: Salary vs. Location</a>
+            <a href="#">Box Plot: Salary vs. Tenure</a>
+            <a href="#">Bar Plot: Salary vs. Skills</a>
+            <a href="#">Scatter Plot: Salary vs. Impressions</a>
+            <a href="#">Graph Network: ?</a>
+          </div>
+        </li>
+        <li><a href="summary.html">SUMMARY</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="landing">
-        <div class="overlay">
-            <h1>LinkedInsights</h1>
-            <p1>Explore the job landscape.</p1>
-            <div class="btn-container">
-                <a href="#discover" class="btn">Learn More</a>
-            </div>
-        </div>
+  <div class="landing">
+    <div class="overlay">
+      <h1>LinkedInsights</h1>
+      <p1>Explore the job landscape.</p1>
+      <div class="btn-container">
+        <a href="#discover" class="btn">Learn More</a>
+      </div>
     </div>
+  </div>
 
-    <div id="discover" class="section">
-        <div class="image-container"></div>
-        <div class="text-container">
-            <h2>Introduction</h2>
-            <p2>The job market today is constantly changing, and understanding hiring trends can help both the job seekers and employers make better decisions.
-                The project that we are doing analyzes a dataset of LinkedIn job postings from 2023 to 2024 to explore trends in job availability, industry demand,
-                required skills, and hiring locations. As we observe shifts in the economy, new technologies, and the rise of remote work since the pandemic,
-                it’s more important than ever to see how opportunities are evolving. By creating effective and informative visualizations of these trends,
-                we hope to give students like us, professionals, and businesses useful insights and views into what the job market looks like today
-                and where it might be headed. NOTE: THIS IS NOT THE FINAL TEXT. THIS IS JUST A PLACEHOLDER FROM THE PROPOSAL.
-            </p2>
-            <div class="btn-container">
-                <a href="#info-section" class="btn btn-discover">About the Data</a>
-            </div>
-        </div>
+  <div id="discover" class="section">
+    <div class="image-container"></div>
+    <div class="text-container">
+      <h2>Introduction</h2>
+      <p2>
+        The job market today is constantly changing, and understanding hiring trends can help both the job seekers and employers make better decisions.
+        The project that we are doing analyzes a dataset of LinkedIn job postings from 2023 to 2024 to explore trends in job availability, industry demand,
+        required skills, and hiring locations. As we observe shifts in the economy, new technologies, and the rise of remote work since the pandemic,
+        it’s more important than ever to see how opportunities are evolving. By creating effective and informative visualizations of these trends,
+        we hope to give students like us, professionals, and businesses useful insights and views into what the job market looks like today
+        and where it might be headed. NOTE: THIS IS NOT THE FINAL TEXT. THIS IS JUST A PLACEHOLDER FROM THE PROPOSAL.
+      </p2>
+      <div class="btn-container">
+        <a href="#info-section" class="btn btn-discover">About the Data</a>
+      </div>
     </div>
+  </div>
 
-    <div id="info-section" class="info-section">
-        <h2 class="left-aligned">Data Process</h2>
-        <p class="subheader left-aligned">This website utilizes LinkedIn job postings from 2023-24.</p>
-        <div class="info-container">
-            <div class="info-box">
-                <div class="info-image">
-                    <img src="https://i.ibb.co/BH2rPNBC/Screenshot-2025-04-03-at-3-49-10-PM.png" alt="Description" width=300>
-                </div>
-                <h3>Step One: Data Source</h3>
-                <p3>We sourced our data from the <a href="https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data">LinkedIn Job Postings (2023 - 2024)</a>
-                    dataset on Kaggle. It comprises of 124,000+ LinkedIn job postings, offering a detailed snapshot of the job market.
-                    It includes job titles, descriptions, salaries, locations, application details, and work types.
-                    Company data covers descriptions, headquarters, employee counts, and LinkedIn followers.
-                    Supplemental files provide job benefits and required skills, making it valuable for labor market analysis,
-                    salary predictions, and industry trends.</p3>
-            </div>
-            <div class="info-box">
-                <div class="info-image">
-                    <img src="https://i.ibb.co/dsYjx2t6/Screenshot-2025-04-03-at-3-49-25-PM.png" alt="Description" width=300>
-                </div>
-                <h3>Step Two: Data Size & EDA</h3>
-                <p3>To clean the data, we filtered out postings with missing values in key columns such as company name,
-                    salary details, job title, location, work type, experience level, and job description.
-                    We also focused on full-time positions with yearly salaries in USD.
-                    The dataset was further refined by filtering out irrelevant or low-value columns
-                    and ensuring location completeness via FIPS codes, resulting in 10,392 postings.
-                    We then enriched the postings were with supplementary datasets that included info on industry segmentation,
-                    skills, and geography.</p3>
-            </div>
-            <div class="info-box">
-                <div class="info-image">
-                    <img src="https://i.ibb.co/9mzxJHjF/Screenshot-2025-04-03-at-3-49-37-PM.png" alt="Description" width=300>
-                </div>
-                <h3>Step Three: Final Attributes</h3>
-                <p3>The final dataset includes key attributes such as job and company identifiers, job titles, descriptions,
-                    and locations (including region, ZIP code, and FIPS codes). It captures industry classifications and associated skills,
-                    experience levels, salary details (normalized, min, and max), engagement metrics (views and applies),
-                    remote work allowance, and a direct job posting URL—providing a rich foundation for analyzing job market trends.
-                    There are 19 total attributes in the clean dataset. </p3>
-            </div>
+  <div id="info-section" class="info-section">
+    <h2 class="left-aligned">Data Process</h2>
+    <p class="subheader left-aligned">This website utilizes LinkedIn job postings from 2023-24.</p>
+    <div class="info-container">
+      <div class="info-box">
+        <div class="info-image">
+          <img src="https://i.ibb.co/BH2rPNBC/Screenshot-2025-04-03-at-3-49-10-PM.png" alt="Description" width="300" />
         </div>
-        <div class="btn-container">
-            <a href="#interactive-section" class="btn btn-scroll-interactive">See Visualizations</a>
+        <h3>Step One: Data Source</h3>
+        <p3>
+          We sourced our data from the
+          <a href="https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/data">LinkedIn Job Postings (2023 - 2024)</a>
+          dataset on Kaggle. It comprises of 124,000+ LinkedIn job postings, offering a detailed snapshot of the job market.
+          It includes job titles, descriptions, salaries, locations, application details, and work types.
+          Company data covers descriptions, headquarters, employee counts, and LinkedIn followers.
+          Supplemental files provide job benefits and required skills, making it valuable for labor market analysis,
+          salary predictions, and industry trends.
+        </p3>
+      </div>
+
+      <div class="info-box">
+        <div class="info-image">
+          <img src="https://i.ibb.co/dsYjx2t6/Screenshot-2025-04-03-at-3-49-25-PM.png" alt="Description" width="300" />
         </div>
+        <h3>Step Two: Data Size & EDA</h3>
+        <p3>
+          To clean the data, we filtered out postings with missing values in key columns such as company name,
+          salary details, job title, location, work type, experience level, and job description.
+          We also focused on full-time positions with yearly salaries in USD.
+          The clean dataset also excludes irrelevant or low-value columns and keeps postings with complete FIPS codes,
+          resulting in 10,392 datapoints. We then enriched the postings with supplementary datasets regarding
+          industry segmentation, skills, and geography.
+        </p3>
+      </div>
+
+      <div class="info-box">
+        <div class="info-image">
+          <img src="https://i.ibb.co/9mzxJHjF/Screenshot-2025-04-03-at-3-49-37-PM.png" alt="Description" width="300" />
+        </div>
+        <h3>Step Three: Final Attributes</h3>
+        <p3>
+          The final dataset includes key attributes such as job and company identifiers, job titles, descriptions,
+          and locations (including region, ZIP code, and FIPS codes). It captures industry classifications and associated skills,
+          experience levels, salary details (normalized, min, and max), engagement metrics (views and applies),
+          remote work allowance, and a direct job posting URL—providing a rich foundation for analyzing job market trends.
+          There are 19 total attributes in the clean dataset.
+        </p3>
+      </div>
     </div>
-
-    <div id="interactive-section" class="interactive-section">
-        <div class="interactive-header">Explore the Visualizations</div>
-        <div class="interactive-content-wrapper">
-            <div class="button-container">
-                <div class="accordion-item">
-                    <button class="accordion-btn">Map: Salary vs. Location</button>
-                    <div class="accordion-content">
-                        <p>Explore how salaries vary geographically based on job location and regional demand.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-btn">Box Plot: Salary vs. Tenure</button>
-                    <div class="accordion-content">
-                        <p>Understand how years of experience or seniority impact salary distributions across industries.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-btn">Bar Plot: Salary vs. Skills</button>
-                    <div class="accordion-content">
-                        <p>Analyze which technical or soft skills are associated with higher or lower salary ranges.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-btn">Scatter Plot: Salary vs. Impressions</button>
-                    <div class="accordion-content">
-                        <p>Visualize the relationship between job visibility and salary—do popular jobs pay more?</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-btn">Graph Network: Skill Co-occurrence</button>
-                    <div class="accordion-content">
-                        <p>Discover how skills connect with one another across job postings in a network structure.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="visual-image-container">
-                <img src="https://i.ibb.co/vCLfckpJ/Screenshot-2025-04-03-at-9-30-39-PM.png" alt="Visual Overview">
-            </div>
-        </div>
+    <div class="btn-container">
+      <a href="#interactive-section" class="btn btn-scroll-interactive">See Visualizations</a>
     </div>
+  </div>
 
+  <div id="interactive-section" class="interactive-section">
+    <div class="interactive-header">Explore the Visualizations</div>
+    <div class="interactive-content-wrapper">
+      <div class="button-container">
+        <div class="accordion-item">
+          <button class="accordion-btn" id="btn1">Map: Salary vs. Location</button>
+          <div class="accordion-content">
+            <p>Explore how salaries vary geographically based on job location and regional demand.</p>
+          </div>
+        </div>
 
-    <script>
-        document.querySelectorAll(".interactive-btn").forEach(button => {
-            button.addEventListener("mouseover", function() {
-                document.getElementById("button-description").textContent = this.getAttribute("data-description");
-            });
-            button.addEventListener("mouseout", function() {
-                document.getElementById("button-description").textContent = "Hover over a button to see details.";
-            });
-        });
-    </script>
+        <div class="accordion-item">
+          <button class="accordion-btn" id="btn2">Box Plot: Salary vs. Tenure</button>
+          <div class="accordion-content">
+            <p>Understand how years of experience or seniority impact salary distributions across industries.</p>
+          </div>
+        </div>
 
+        <div class="accordion-item">
+          <button class="accordion-btn" id="btn3">Bar Plot: Salary vs. Skills</button>
+          <div class="accordion-content">
+            <p>Analyze which technical or soft skills are associated with higher or lower salary ranges.</p>
+          </div>
+        </div>
 
+        <div class="accordion-item">
+          <button class="accordion-btn" id="btn4">Scatter Plot: Salary vs. Impressions</button>
+          <div class="accordion-content">
+            <p>Visualize the relationship between job visibility and salary—do popular jobs pay more?</p>
+          </div>
+        </div>
 
+        <div class="accordion-item">
+          <button class="accordion-btn" id="btn5">Graph Network: Skill Co-occurrence</button>
+          <div class="accordion-content">
+            <p>Discover how skills connect with one another across job postings in a network structure.</p>
+          </div>
+        </div>
+      </div>
+      <div class="image-display">
+        <img id="display-image" src="https://i.ibb.co/vCLfckpJ/Screenshot-2025-04-03-at-9-30-39-PM.png" alt="Visual Overview" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".interactive-btn").forEach(button => {
+      button.addEventListener("mouseover", function () {
+        document.getElementById("button-description").textContent = this.getAttribute("data-description");
+      });
+      button.addEventListener("mouseout", function () {
+        document.getElementById("button-description").textContent = "Hover over a button to see details.";
+      });
+    });
+  </script>
 </body>
+
 </html>
