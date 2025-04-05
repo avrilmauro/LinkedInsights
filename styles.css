@@ -314,6 +314,26 @@ body {
     padding: 50px;
 }
 
+/* Map Page */
+.map_section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    padding: 50px;
+}
+
+.text-container2 {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 300px;
+    margin-left: 300px;
+    align-items: center;
+
+}
+
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
