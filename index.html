@@ -29,18 +29,18 @@
           event.preventDefault();
           const links = [
             "map.html",
-            "page2.html",
-            "page3.html",
-            "page4.html",
-            "page5.html"
+            "box.html",
+            "bar.html",
+            "scatter.html",
+            "network.html"
           ];
           window.location.href = links[index];
         });
       });
 
       const imageMap = {
-        "btn1": "https://cdn-icons-png.flaticon.com/512/9029/9029931.png",
-        "btn2": "https://cdn-icons-png.freepik.com/512/9591/9591160.png",
+        "btn1": "https://i.ibb.co/3YmzwRWt/Screenshot-2025-04-06-at-9-05-18-PM.png",
+        "btn2": "https://i.ibb.co/Z6MkVSvk/Screenshot-2025-04-06-at-9-05-03-PM.png",
         "btn3": "https://cdn-icons-png.freepik.com/512/1638/1638183.png",
         "btn4": "https://cdn-icons-png.freepik.com/256/4104/4104180.png",
         "btn5": "https://cdn-icons-png.freepik.com/512/8041/8041752.png"
@@ -76,10 +76,10 @@
           <a href="#interactive-section" class="dropbtn">DATA VISUALIZATIONS</a>
           <div class="dropdown-content">
             <a href="map.html">Map: Salary vs. Location</a>
-            <a href="#">Box Plot: Salary vs. Tenure</a>
-            <a href="#">Bar Plot: Salary vs. Skills</a>
-            <a href="#">Scatter Plot: Salary vs. Impressions</a>
-            <a href="#">Graph Network: ?</a>
+            <a href="box.html">Box Plot: Salary vs. Tenure</a>
+            <a href="bar.html">Bar Plot: Salary vs. Skills</a>
+            <a href="scatter.html">Scatter Plot: Salary vs. Impressions</a>
+            <a href="network.html">Graph Network: ?</a>
           </div>
         </li>
         <li><a href="summary.html">SUMMARY</a></li>
@@ -145,7 +145,7 @@
           salary details, job title, location, work type, experience level, and job description.
           We also focused on full-time positions with yearly salaries in USD.
           The clean dataset also excludes irrelevant or low-value columns and keeps postings with complete FIPS codes,
-          resulting in 10,392 datapoints. We then enriched the postings with supplementary datasets regarding
+          resulting in 9,545 datapoints. We then enriched the postings with supplementary datasets regarding
           industry segmentation, skills, and geography.
         </p3>
       </div>
@@ -183,7 +183,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" id="btn2">Box Plot: Salary vs. Tenure</button>
           <div class="accordion-content">
-            <p>Understand how years of experience or seniority impact salary distributions across industries.</p>
+            <p>Understand how years of experience or seniority impact salary distributions.</p>
           </div>
         </div>
 
