@@ -36,6 +36,9 @@
     .axis text {
       font-size: 12px;
     }
+    .axis-label {
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -43,7 +46,7 @@
   <svg width="1000" height="500"></svg>
   <script>
     const svg = d3.select("svg"),
-      margin = { top: 40, right: 20, bottom: 60, left: 80 },
+      margin = { top: 40, right: 20, bottom: 80, left: 100 },
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -106,12 +109,34 @@
 
       g.append("g")
         .attr("transform", `translate(0, ${height})`)
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .style("font-size", "12px")
+        .style("font-family", "Roboto")
+        .style("font-weight", "bold")
+        .attr("dy", "1.5em");
 
       g.append("g")
         .call(d3.axisLeft(y).tickFormat(formatMoney))
         .select(".domain")
         .remove();
+
+      // X axis label
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("x", margin.left + width / 2)
+        .attr("y", height + margin.top + 60)
+        .attr("text-anchor", "middle")
+        .text("Experience Level");
+
+      // Y axis label
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -(margin.top + height / 2))
+        .attr("y", 30)
+        .attr("text-anchor", "middle")
+        .text("Salary");
 
       const boxWidth = x.bandwidth();
 

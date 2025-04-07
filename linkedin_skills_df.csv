@@ -1,0 +1,31 @@
+,salary_bucket,skill_name,count
+16,$110k-$150k,Information Technology,683
+11,$110k-$150k,Engineering,416
+28,$110k-$150k,Sales,302
+18,$110k-$150k,Management,286
+12,$110k-$150k,Finance,258
+50,$150k-$200k,Information Technology,474
+45,$150k-$200k,Engineering,321
+62,$150k-$200k,Sales,216
+52,$150k-$200k,Management,153
+46,$150k-$200k,Finance,142
+84,$200k+,Information Technology,175
+79,$200k+,Engineering,126
+96,$200k+,Sales,105
+82,$200k+,Health Care Provider,102
+73,$200k+,Business Development,80
+130,$60k-$85k,Sales,428
+120,$60k-$85k,Management,335
+118,$60k-$85k,Information Technology,322
+102,$60k-$85k,Accounting/Auditing,300
+107,$60k-$85k,Business Development,276
+152,$85k-$110k,Information Technology,432
+147,$85k-$110k,Engineering,323
+164,$85k-$110k,Sales,309
+148,$85k-$110k,Finance,272
+154,$85k-$110k,Management,265
+198,Under $60k,Sales,271
+175,Under $60k,Business Development,180
+188,Under $60k,Management,127
+171,Under $60k,Administrative,120
+186,Under $60k,Information Technology,116

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <script>
+  </script>
+</head>
+
+<body>
+  <header class="fixed-header">
+    <div class="header-title">LinkedInsights</div>
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="index.html" class="dropbtn">HOME</a>
+          <div class="dropdown-content">
+            <a href="index.html##discover">Discover</a>
+            <a href="index.html##info-section">Info</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="index.html##interactive-section" class="dropbtn">DATA VISUALIZATIONS</a>
+          <div class="dropdown-content">
+            <a href="map.html">Map: Salary vs. Location</a>
+            <a href="box.html">Box Plot: Salary vs. Tenure</a>
+            <a href="bar.html">Bar Plot: Salary vs. Skills</a>
+            <a href="scatter.html">Scatter Plot: Salary vs. Impressions</a>
+            <a href="network.html">Graph Network: Salary vs. Industry</a>
+          </div>
+        </li>
+        <li><a href="summary.html">SUMMARY</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="text-container2">
+    <h3>U.S. Job Market Scatter Plot: Job Impressions by Salary and Region (2023-2024)</h3>
+    <p3>
+     This interactive visualization displays job postings on LinkedIn, showing how salary relates to job views (left)
+      and applications (right). Each point represents a job, and only postings with recorded application counts are
+      included (2,442 in total). You can use the legend at the bottom to highlight specific regions, hover over a
+      point to see the job title, company, and salary, or click and drag across the salary axis in the left chart to
+      filter the right chart by salary range.
+    </p3>
+  </div>
+  <div class="scatter-frame">
+    <iframe src="scatterplots.html" width="100%" height="550" style="border:none;"></iframe>
+  </div>
+  <div class="text-container2">
+    <h4>Takeaways</h4>
+    <p3>
+      This visualization reveals interesting relationships between salary, job views, and applications count. While many outlier jobs with significantly higher salaries tend to attract substantial attention—suggesting a correlation between interest and action—high pay alone doesn't guarantee engagement. For example, some postings offering $300K+ fail to draw more views or applications than lower-paying roles. When analyzing regional patterns, the Northeast stands out with a wide range of high-engagement jobs, even at lower salary levels. In contrast, the South and West show more consistent view and apply counts across salary bands, though few postings exceed 100 applications. The Midwest generally aligns with national trends, but with a tighter clustering around lower salary and engagement figures, indicating relatively lower interest in those job postings.
+    </p3>
+  </div>
+
+
+</body>
+
+</html>
