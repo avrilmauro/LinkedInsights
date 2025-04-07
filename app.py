@@ -3,6 +3,7 @@ from dash import dcc, html, Input, Output
 import dash_cytoscape as cyto
 import pandas as pd
 import numpy as np
+import os
 
 df = pd.read_csv('linkedin_df.csv')
 unique_sectors = df['Sector'].unique()
