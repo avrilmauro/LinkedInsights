@@ -334,6 +334,35 @@ body {
 
 }
 
+/* Network Page */
+.network-section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.network-frame {
+    flex: 2;
+    width:100%;
+    border-right: 1px solid #ccc;
+}
+
+.network-frame iframe {
+    width: 75%;
+    height: 100%;
+    border: none;
+    margin-left: 100px;
+}
+
+.text-container3 {
+    width: 25%;
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    margin-right: 50px;
+    margin-top: 250px;
+}
+
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
