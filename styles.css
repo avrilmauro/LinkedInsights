@@ -130,17 +130,17 @@ body {
 .section {
     display: flex;
     align-items: center;
-    height: 80vh;
+    height: 90vh;
     background: url('https://i.ibb.co/FLkQQj0L/intro-splash.png') no-repeat center center/cover;
     padding: 50px;
 }
 
 .text-container {
     flex: 1;
-    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin-right: 100px;
+    max-width: 700px;
 }
 /* Data Section */
 .info-section {
@@ -413,3 +413,11 @@ p3 {
     line-height: 1.5;
     text-align: justify;
 }
+
+p4 {
+    font-size: .7rem;
+    line-height: 1;
+    color: grey;
+    text-align: justify;
+}
+
