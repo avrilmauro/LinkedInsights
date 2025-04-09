@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stacked Bar Chart with Data Labels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family:'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .tooltip {
+      position: absolute;
+      padding: 6px;
+      background: white;
+      border: 1px solid #ccc;
+      pointer-events: none;
+      font-size: 12px;
+    }
+
+    .legend {
+      font-size: 12px;
+    }
+
+    .legend rect {
+      stroke-width: 1;
+      stroke: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bar Plot: Top 5 Skills Across Salary Buckets</h2>
+  <svg width="960" height="500"></svg>
+  <script src="barplot.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+,salary_bucket,skill_name,count
+193,$110k-$150k,['Information Technology'],232
+106,$110k-$150k,"['Engineering', 'Information Technology']",209
+220,$110k-$150k,"['Management', 'Manufacturing']",142
+163,$110k-$150k,['Health Care Provider'],95
+13,$110k-$150k,"['Accounting/Auditing', 'Finance']",92
+426,$150k-$200k,"['Engineering', 'Information Technology']",186
+475,$150k-$200k,['Information Technology'],122
+494,$150k-$200k,"['Management', 'Manufacturing']",60
+481,$150k-$200k,['Legal'],57
+519,$150k-$200k,['Other'],57
+648,$200k+,['Health Care Provider'],95
+661,$200k+,['Legal'],69
+623,$200k+,"['Engineering', 'Information Technology']",60
+657,$200k+,['Information Technology'],41
+707,$200k+,"['Sales', 'Business Development']",34
+967,$60k-$85k,"['Management', 'Manufacturing']",166
+1082,$60k-$85k,"['Sales', 'Business Development']",156
+1016,$60k-$85k,['Other'],133
+738,$60k-$85k,"['Accounting/Auditing', 'Finance']",125
+942,$60k-$85k,['Information Technology'],102
+1314,$85k-$110k,['Information Technology'],144
+1332,$85k-$110k,"['Management', 'Manufacturing']",144
+1231,$85k-$110k,"['Engineering', 'Information Technology']",136
+1135,$85k-$110k,"['Accounting/Auditing', 'Finance']",108
+1443,$85k-$110k,"['Sales', 'Business Development']",92
+1628,Under $60k,['Other'],93
+1657,Under $60k,"['Sales', 'Business Development']",93
+1601,Under $60k,"['Management', 'Manufacturing']",74
+1521,Under $60k,['Administrative'],65
+1496,Under $60k,"['Accounting/Auditing', 'Finance']",57
