@@ -46,7 +46,7 @@
   <svg width="1000" height="500"></svg>
   <script>
     const svg = d3.select("svg"),
-      margin = { top: 40, right: 20, bottom: 80, left: 100 },
+      margin = { top: 60, right: 20, bottom: 80, left: 100 },
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -100,6 +100,16 @@
         .range([height, 0])
         .nice();
 
+      // Add title
+      svg.append("text")
+        .attr("x", 20)
+        .attr("y", 25)
+        .attr("text-anchor", "bold")
+        .style("font-size", "18px")
+        .style("font-weight", "bold")
+        .style("font-family", "Roboto")
+        .text("Salary Distribution by Experience Level");
+
       g.append("g")
         .attr("class", "grid")
         .call(d3.axisLeft(y)
@@ -111,7 +121,7 @@
         .attr("transform", `translate(0, ${height})`)
         .call(d3.axisBottom(x))
         .selectAll("text")
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .style("font-family", "Roboto")
         .style("font-weight", "bold")
         .attr("dy", "1.5em");
@@ -136,6 +146,7 @@
         .attr("x", -(margin.top + height / 2))
         .attr("y", 30)
         .attr("text-anchor", "middle")
+        .style("font-size", "14px")
         .text("Salary");
 
       const boxWidth = x.bandwidth();
@@ -167,7 +178,7 @@
         .attr("x", d => x(d.level) + boxWidth / 2)
         .attr("y", d => y(d.median) - 6)
         .attr("text-anchor", "middle")
-        .attr("font-size", "10px")
+        .attr("font-size", "11px")
         .attr("fill", "white")
         .text(d => d.level === "Internship" ? "" : formatMoney(d.median));
 
@@ -216,7 +227,7 @@
         .attr("x", d => x(d.level) + boxWidth / 2)
         .attr("y", d => y(d.min) + 16)
         .attr("text-anchor", "middle")
-        .attr("font-size", "10px")
+        .attr("font-size", "12px")
         .attr("fill", "gray")
         .text(d => "Min: " + formatMoney(d.min));
 
@@ -227,7 +238,7 @@
         .attr("x", d => x(d.level) + boxWidth / 2)
         .attr("y", d => y(d.max) - 8)
         .attr("text-anchor", "middle")
-        .attr("font-size", "10px")
+        .attr("font-size", "12px")
         .attr("fill", "gray")
         .text(d => "Max: " + formatMoney(d.max));
     });

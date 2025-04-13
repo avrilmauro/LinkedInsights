@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Count by Experience Level</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', 'Roboto', sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bar {
+      fill: #0072b1;
+      transition: opacity 0.2s;
+    }
+
+    .bar:hover {
+      opacity: 0.8;
+    }
+
+    .grid line {
+      stroke: #e0e0e0;
+      stroke-opacity: 1;
+      shape-rendering: crispEdges;
+    }
+
+    .grid path {
+      stroke-width: 0;
+    }
+
+    .axis text {
+      font-size: 12px;
+    }
+
+    .axis-label {
+      font-size: 14px;
+    }
+
+    .tooltip {
+      position: absolute;
+      padding: 8px;
+      background: white;
+      border: 1px solid #ccc;
+      pointer-events: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <svg width="1000" height="500"></svg>
+
+  <script>
+    const svg = d3.select("svg"),
+      margin = { top: 60, right: 20, bottom: 80, left: 100 },
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = +svg.attr("height") - margin.top - margin.bottom;
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Add title
+    svg.append("text")
+      .attr("x", 20)
+      .attr("y", 30)
+      .attr("text-anchor", "bold")
+      .style("font-size", "18px")
+      .style("font-weight", "bold")
+      .style("font-family", "Roboto")
+      .text("Job Count by Experience Level");
+
+    function formatNumber(val) {
+      if (val >= 1000) return d3.format(",.0f")(val);
+      return val;
+    }
+
+    d3.csv("linkedin_df.csv").then(data => {
+      // Process the data similar to the Python code
+      const experienceCounts = d3.rollups(
+        data,
+        v => v.length,
+        d => d.formatted_experience_level
+      );
+
+      // Define the ordering of experience levels
+      const levelMap = {
+        "Internship": "Internship",
+        "Entry level": "Entry Level",
+        "Associate": "Associate",
+        "Mid-Senior level": "Mid-Senior Level",
+        "Director": "Director",
+        "Executive": "Executive"
+      };
+
+      const orderedLevels = ["Internship", "Entry level", "Associate", "Mid-Senior level", "Director", "Executive"];
+
+      // Sort and process the data
+      const processedData = orderedLevels
+        .filter(level => experienceCounts.some(item => item[0] === level))
+        .map(level => {
+          const match = experienceCounts.find(item => item[0] === level);
+          return {
+            level: levelMap[level] || level,
+            count: match ? match[1] : 0
+          };
+        });
+
+      // Create scales
+      const x = d3.scaleBand()
+        .domain(processedData.map(d => d.level))
+        .range([0, width])
+        .padding(0.4);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(processedData, d => d.count) * 1.1])
+        .range([height, 0])
+        .nice();
+
+      // Add grid lines
+      g.append("g")
+        .attr("class", "grid")
+        .call(d3.axisLeft(y)
+          .tickSize(-width)
+          .tickFormat("")
+        );
+
+      // Add X axis
+      g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .style("font-size", "14px")
+        .style("font-family", "Roboto")
+        .style("font-weight", "bold")
+        .attr("dy", "1.5em");
+
+      // Add Y axis
+      g.append("g")
+        .call(d3.axisLeft(y).tickFormat(formatNumber))
+        .select(".domain")
+        .remove();
+
+      // X axis label
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("x", margin.left + width / 2)
+        .attr("y", height + margin.top + 60)
+        .attr("text-anchor", "middle")
+        .text("Experience Level");
+
+      // Y axis label
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -(margin.top + height / 2))
+        .attr("y", 30)
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .text("Number of Jobs");
+
+      // Create tooltip
+      const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+      // Add bars
+      g.selectAll(".bar")
+        .data(processedData)
+        .enter()
+        .append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.level))
+        .attr("y", d => y(d.count))
+        .attr("width", x.bandwidth())
+        .attr("height", d => height - y(d.count))
+        .on("mouseover", function(event, d) {
+          tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+          tooltip.html(`<strong>${d.level}</strong><br>Job Count: ${formatNumber(d.count)}`)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+          tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
+        });
+
+      // Add count labels
+      g.selectAll(".label")
+        .data(processedData)
+        .enter()
+        .append("text")
+        .attr("x", d => x(d.level) + x.bandwidth() / 2)
+        .attr("y", d => y(d.count) - 8)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "12px")
+        .attr("fill", "gray")
+        .text(d => formatNumber(d.count));
+    });
+  </script>
+</body>
+</html>
