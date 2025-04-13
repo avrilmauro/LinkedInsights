@@ -1,5 +1,5 @@
 """
-This file produces the Map visualization
+This file produces the side by side scatterplots
 """
 import pandas as pd
 import altair as alt
